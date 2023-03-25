@@ -8,12 +8,12 @@ import { productModel } from '../models/product.model';
 })
 export class ProductService {
    AllProducts =new BehaviorSubject<productModel[]>([]);
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient) {
     this.getFromDb("");
 
   }
 
-  private baseUrl="http://localhost:8000/api/";
+  private baseUrl="http://localhost:8000/api/products";
   public add(form: any)
   {
     return this.http.post(this.baseUrl+"add",form)
@@ -31,7 +31,7 @@ export class ProductService {
   }
   public getFromDb(keys:any)
   {
-    return this.http.post(this.baseUrl +`show?keys=${keys}`,null).subscribe(res=>{
+    return this.http.get(this.baseUrl ).subscribe(res=>{
       var r:any =res;
       console.log(keys)
       this.AllProducts.next(r.products)
