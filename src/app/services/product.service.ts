@@ -13,7 +13,7 @@ export class ProductService {
 
   }
 
-  private baseUrl="http://localhost:8000/api/products";
+  private baseUrl="http://localhost:8000/api/";
   public add(form: any)
   {
     return this.http.post(this.baseUrl+"add",form)
