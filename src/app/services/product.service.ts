@@ -31,7 +31,7 @@ export class ProductService {
   }
   public getFromDb(keys:any)
   {
-    return this.http.get(this.baseUrl ).subscribe(res=>{
+    return this.http.post(this.baseUrl+"show?keys"+keys,null).subscribe(res=>{
       var r:any =res;
       console.log(keys)
       this.AllProducts.next(r.products)
