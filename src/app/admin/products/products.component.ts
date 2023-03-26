@@ -32,4 +32,26 @@ onSelect(event: any){
   this.selectedImage=<File>event.target.files[0];
 
 }
+add(){
+  var message;
+  const fd=new FormData();
+  fd.append('image',this.selectedImage)
+  fd.append('name',$("#name").val())
+  fd.append('category',$("#category").val())
+  fd.append('brand',$("#brand").val())
+  fd.append('price',$("#price").val())
+  fd.append('desc',$("#desc").val())
+this.proSer.add(fd).subscribe(
+  res=>{
+    // message=res;
+    // toast.fire({
+    //   type:"sucess",
+    //   title:message
+    // })
+    this.proSer.getFromDb("")
+  },
+// error=>{error.error.error.forEach(element =>{ toastr.error("error",element);});
+)
+
+}
 }
