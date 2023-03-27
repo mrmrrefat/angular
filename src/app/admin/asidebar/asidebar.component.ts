@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AsidebarComponent {
 constructor(private router:Router){}
+
 logout(){
-  localStorage.removeItem("user")
+  localStorage.removeItem("user");
   this.router.navigateByUrl("")
-  }
+}
 }
