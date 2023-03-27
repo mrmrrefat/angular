@@ -24,7 +24,7 @@
             <button type="button" data-toggle="modal" data-target="#AddModal" class="btn btn-default btn-sm"><i class="fas fa-plus-circle"></i>Add New Product</button>
             <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fas fa-square"></i>
             </button>
-            
+
             <div class="btn-group">
                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-trash"></i></button>
 
@@ -69,9 +69,9 @@
                     <td>{{pro.price}}</td>
                     <td>{{pro.desc |slice:0:20}}</td>
                     <td>               
-                     <button type="button" class="btn btn-default btn-sm"><i (click)="selectForDelete(pro.id)" data-toggle="modal" data-target="#DeleteModal" class="fas fa-trash"></i></button>
-                     <button type="button" class="btn btn-default btn-sm"><i (click)="selectForUpdate(pro.id)" data-toggle="modal" data-target="#UpdateModal" class="fas fa-edit"></i></button>
-                     <button type="button" class="btn btn-default btn-sm"><i (click)="selectForShow(pro.id)" data-toggle="modal" data-target="#ShowModal" class="fas fa-eye"></i></button>
+                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-trash"></i></button>
+                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-edit"></i></button>
+                     <button type="button" class="btn btn-default btn-sm"><i class="fas fa-eye"></i></button>
 
                     </td>
                 </tr>
@@ -138,9 +138,9 @@
             </div> <br>
             <label for="">Name:</label>
             <div class="row"><input id="name" class="form-control"></div>
-            <div class="row"> 
-                
-                <div class="col"> 
+            <div class="row">
+
+                <div class="col">
                     <label for="">Category:</label><select  class="form-control" name="" id="category">
                     <option value="AliShoes">AliShoes</option>
                     <option value="Bags">Bags</option>
@@ -161,7 +161,7 @@
                 <label for="">Description:</label>
                 <textarea name="" id="desc" class="form-control" style="height: 100px;"></textarea>
             </div>
-            
+
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -173,199 +173,3 @@
 
 </div>
 </div>
-<!-- ///////////////////////////////////////////////////////////////// -->
-<!-- update model -->
-<div class="modal  fade " id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLab">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Update Products</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-    
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="./assets/images.jpg" alt="" class="img-thumbnail" id="UpdateImage" style="width: 50px; height: 50px;">
-                        </div>
-                        <div class="col-md-9">
-                            <!-- <input type="file" id="image" style="margin-left: 10px; " (change)="onSelect($event)" accept="image/*"> -->
-                        </div>
-                    </div>
-    
-                </div> <br>
-                <label for="">Name:</label>
-                <div class="row"><input id="uname" class="form-control"></div>
-                <div class="row"> 
-                    
-                    <div class="col"> 
-                        <label for="">Category:</label><select  class="form-control" name="" id="ucategory">
-                        <option id="oldcategory" value="khadi">khadi</option>
-                        <option value="AliShoes">AliShoes</option>
-                        <option value="Bags">Bags</option>
-    
-                    </select></div>
-                    <div class="col">
-                        <label for="">Brand:</label>
-                        <select  class="form-control" name="" id="ubrand">
-                        <option id="oldbrand" value="khadi">khadi</option>
-                        <option value="khadi">khadi</option>
-                        <option value="j.">j.</option>
-    
-                    </select></div>
-                    <div class="col">
-                        <label for="">Price:</label>
-                        <input  type="number" id="uprice" class="form-control"></div>
-                </div>
-                <div class="row">
-                    <label for="">Description:</label>
-                    <textarea name="" id="udesc" class="form-control" style="height: 100px;"></textarea>
-                </div>
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="update()">Update Product</button>
-    
-            </div>
-    
-        </div>
-    
-    </div>
-    </div>
-
-
-    <!-- delete model -->
-<div class="modal  fade " id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLab">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Deletting Products</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-    
-            </div>
-            <div class="modal-body">
-                <!-- <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img src="./assets/images.jpg" alt="" class="img-thumbnail" id="AddEmpImage" style="width: 100px; height: 100px;">
-                        </div>
-                        <div class="col-md-9">
-                        </div>
-                    </div>
-    
-                </div> <br> -->
-                <h3>Are You Want to Delete  This Product ?</h3>
-
-                <!-- <label for="">Name:</label>
-                <div class="row"><input id="uname" class="form-control"></div>
-                <div class="row"> 
-                    
-                    <div class="col"> 
-                        <label for="">Category:</label><select  class="form-control" name="" id="ucategory">
-                        <option id="oldcategory" value="khadi">khadi</option>
-                        <option value="AliShoes">AliShoes</option>
-                        <option value="Bags">Bags</option>
-    
-                    </select></div>
-                    <div class="col">
-                        <label for="">Brand:</label>
-                        <select  class="form-control" name="" id="ubrand">
-                        <option id="oldbrand" value="khadi">khadi</option>
-                        <option value="khadi">khadi</option>
-                        <option value="j.">j.</option>
-    
-                    </select></div>
-                    <div class="col">
-                        <label for="">Price:</label>
-                        <input  type="number" id="uprice" class="form-control"></div>
-                </div>
-                <div class="row">
-                    <label for="">Description:</label>
-                    <textarea name="" id="udesc" class="form-control" style="height: 100px;"></textarea>
-                </div>
-                 -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteFrom()">Delete Product</button>
-    
-            </div>
-    
-        </div>
-    
-    </div>
-    </div>
-    <!-- /Show product -->
-    <div class="modal  fade " id="ShowModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLab">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Product Details </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-        
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="./assets/images.jpg" alt="" class="img-thumbnail" id="ShowImage" style="width: 50px; height: 50px;">
-                            </div>
-                            <div class="col-md-9">
-                                <!-- <input type="file" id="image" style="margin-left: 10px; " (change)="onSelect($event)" accept="image/*"> -->
-                            </div>
-                        </div>
-        
-                    </div> <br>
-                    <label for="">Name:</label>
-                    <div class="row"><input id="sname" disabled class="form-control"></div>
-                    <div class="row"> 
-                        
-                        <div class="col"> 
-                            <label for="">Category:</label><select disabled class="form-control" name="" id="scategory">
-                            <option id="soldcategory" value="khadi">khadi</option>
-                            <option value="AliShoes">AliShoes</option>
-                            <option value="AliShoes">AliShoes</option>
-                            <option value="AliShoes">AliShoes</option>
-                            <option value="Bags">Bags</option>
-        
-                        </select></div>
-                        <div class="col">
-                            <label for="">Brand:</label>
-                            <select disabled class="form-control" name="" id="sbrand">
-                            <option id="soldbrand" value="khadi">khadi</option>
-                            <option value="khadi">khadi</option>
-                            <option value="khadi">khadi</option>
-                            <option value="khadi">khadi</option>
-                            <option value="j.">j.</option>
-        
-                        </select></div>
-                        <div class="col">
-                            <label for="">Price:</label>
-                            <input disabled type="number" id="sprice" class="form-control"></div>
-                    </div>
-                    <div class="row">
-                        <label for="">Description:</label>
-                        <textarea disabled name="" id="sdesc" class="form-control" style="height: 100px;"></textarea>
-                    </div>
-                    
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
-                    <!-- <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="update()">Update Product</button> -->
-        
-                </div>
-        
-            </div>
-        
-        </div>
-        </div>
-    
-    
