@@ -67,6 +67,7 @@ selectForUpdate(id:any){
       $("#oldbrand").html(el.brand)
       $("#uprice").prop("value",el.price)
       $("#udesc").prop("value",el.desc)
+      $("#UpdateImage").fadeIn("fast").attr('src',el.imgpath);
 
     }
   })
@@ -83,6 +84,7 @@ selectForShow(id:any){
       $("#soldbrand").prop("value",el.brand)
       $("#sprice").prop("value",el.price)
       $("#sdesc").prop("value",el.desc)
+      $("#ShowImage").fadeIn("fast").attr('src',el.imgpath);
 
     }
   })
