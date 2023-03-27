@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { error } from 'jquery';
 import { productModel } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 declare var $:any;
 declare var toastr:any;
 declare var toast:any;
+
 
 @Component({
   selector: 'app-products',
@@ -13,6 +15,7 @@ declare var toast:any;
 export class ProductsComponent implements OnInit {
   products: productModel[] = [];
   selectedImage!:File;
+  tempID="";
 constructor( private proSer:ProductService){
 
 }

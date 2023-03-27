@@ -24,7 +24,7 @@
             <button type="button" data-toggle="modal" data-target="#AddModal" class="btn btn-default btn-sm"><i class="fas fa-plus-circle"></i>Add New Product</button>
             <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fas fa-square"></i>
             </button>
-            
+
             <div class="btn-group">
                 <button type="button" class="btn btn-default btn-sm"><i class="fas fa-trash"></i></button>
 
@@ -113,7 +113,7 @@
 <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddModal" >
     launch demo modal
 </button> -->
-<!-- modal -->
+<!-- modal add -->
 <div class="modal  fade " id="AddModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLab">
 <div class="modal-dialog">
     <div class="modal-content">
@@ -138,10 +138,6 @@
             </div> <br>
             <label for="">Name:</label>
             <div class="row"><input id="name" class="form-control"></div>
-            <div class="row"> 
-                
-                <div class="col"> 
-                    <label for="">Category:</label><select  class="form-control" name="category" id="category">
                     <option value="AliShoes">AliShoes</option>
                     <option value="Bags">Bags</option>
 
@@ -161,11 +157,11 @@
                 <label for="">Description:</label>
                 <textarea name="desc" id="desc" class="form-control" style="height: 100px;"></textarea>
             </div>
-            
+
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary">Cancel</button>
-            <button type="button" class="btn btn-primary" (click)="add()">Add Product</button>
+            <button type="button" class="btn btn-primary">Add Product</button>
 
         </div>
 
