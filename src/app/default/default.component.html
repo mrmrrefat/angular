@@ -1,1 +1,23 @@
 <router-outlet> </router-outlet>
+
+<div class="container-fluid">
+  <div class="row">
+    <app-dtopbar></app-dtopbar>
+  </div>
+  <div class="row">
+    <!-- left sidebar -->
+    <div class="col-md-2">
+<app-dleftsidebar></app-dleftsidebar>
+  </div>
+      <!-- main container -->
+<router-outlet></router-outlet>
+  <div class="col-md-7">
+<!-- right sidebar for registration -->
+  </div>
+  <div class="col-md-4">
+<app-dregistration></app-dregistration>
+  </div>
+</div>
+
+
+</div>
