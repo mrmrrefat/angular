@@ -8,6 +8,7 @@ import { Component,OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 name=""
 ngOnInit(): void {
-  this.name="marina refat"
+  var user:any=localStorage.getItem('user')
+  this.name=user.name
 }
 }

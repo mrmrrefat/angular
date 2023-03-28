@@ -14,6 +14,7 @@ const routes: Routes =
     {path:"about",component:AboutComponent},
 
     {path:"product",component:DpproductsComponent}
+    // {path:"register",component:DregistrationComponent}
 
   ]}
 

@@ -1,16 +1,20 @@
 <div style="border: 2px solid gray;margin-top:20px;">
   <div class="card-body" >
     <div class="form-group">
-      <label for="Email">Email address</label>
-      <input type="email" class="form-control" id="Email" placeholder="Enter email">
+      <label for="Email">Name</label>
+      <input type="email" class="form-control" id="rname" placeholder="Enter name">
     </div>
     <div class="form-group">
-      <label for="Passw">Password</label>
-      <input type="password" class="form-control" id="passw" placeholder="Password">
+      <label for="Email">Email address</label>
+      <input type="email" class="form-control" id="rEmail" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="Pass">Password</label>
+      <input type="password" class="form-control" id="rpass" placeholder="Password">
     </div>
     <div class="form-group">
       <label for="cpass">confirm-Password</label>
-      <input type="password" class="form-control" id="cpass" placeholder="confirm Password">
+      <input type="password"  class="form-control" id="cpass" placeholder="confirm Password">
     </div>
 
 
@@ -18,6 +22,6 @@
   <!-- /.card-body -->
 
   <div class="card-footer">
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" (click)="register()" class="btn btn-primary">Register</button>
   </div>
 </div>
