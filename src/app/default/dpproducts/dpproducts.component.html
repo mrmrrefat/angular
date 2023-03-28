@@ -1,1 +1,49 @@
-<p>dpproducts works!</p>
+<div class="container-fluid" style="margin-top: 20px;" >
+  <div class="row">
+    <div style="margin-left: 10px;">
+      All producte
+    </div>
+    <hr>
+
+</div>
+  <div class="row">
+    <div class="col-4" *ngFor="let p of products" >
+      <div class=" d-flex align-items-stretch" >
+        <div class="card bg-light">
+          <div class="card-header text-muted border-bottom-0">
+            Digital Strategist
+          </div>
+          <div class="card-body pt-0">
+            <div class="row">
+              <div class="col-7">
+                <h2 class="lead"><b>{{p.name}}</b></h2>
+                <label>price:</label><small>{{p.price}}</small>
+                <label>Brand:</label><small>{{p.brand}}</small>
+                <label>Category:</label><small>{{p.category}}</small>
+                <label>Description:</label><small>{{p.desc|slice:0:20}}</small>
+
+              </div>
+              <div class="col-5 text-center">
+                <img src="{{p.imgpath}}" alt="" class="img-circle img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="text-right">
+              <a href="#" class="btn btn-sm bg-teal">
+                <i class="fas fa-cart-plus"></i>
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-plus-circle"></i> add to cart
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+</div>
+</div>
+
+
+
